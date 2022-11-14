@@ -14,5 +14,14 @@ oldval=[int(val) for val in input().split() if val.isdigit()]
 newsqr=list(map(sqr,oldval))
 newsqrt=list(map(sqrt,oldval))
 print("\nOld Value=",oldval)
-print("\nNew Square Value=",newsqr)
-print("\nNew Root Square Value=",newsqrt)
+print("Square Values")
+d1=dict(zip(oldval,newsqr))
+d2=dict(zip(oldval,newsqrt))
+for v,k in d1.items():
+    print("\t{}==>{}".format(v,k))
+print("-"*50)
+print("Square root of values:")
+for v,k in d2.items():
+    print("\t{}-->{}".format(v,round(k,2)))
+print("-"*50)
+
